@@ -1,0 +1,6 @@
+{
+  "script": "return (input => {\n      document.getElementById('userInput').value = input;\n    }).apply(null, arguments)",
+  "args": [
+    "Enter password here"
+  ]
+}

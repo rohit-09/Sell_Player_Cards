@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button/*[contains(text(),'Transfers')]/..\"}\n  (Session info: chrome=117.0.5938.92)",
+  "stacktrace": "\tGetHandleVerifier [0x00007FF7B4A87892+54818]\n\t(No symbol) [0x00007FF7B49F6AC2]\n\t(No symbol) [0x00007FF7B48ADA3B]\n\t(No symbol) [0x00007FF7B48EE4FC]\n\t(No symbol) [0x00007FF7B48EE67C]\n\t(No symbol) [0x00007FF7B4929627]\n\t(No symbol) [0x00007FF7B490EAEF]\n\t(No symbol) [0x00007FF7B49275A2]\n\t(No symbol) [0x00007FF7B490E883]\n\t(No symbol) [0x00007FF7B48E3691]\n\t(No symbol) [0x00007FF7B48E48D4]\n\tGetHandleVerifier [0x00007FF7B4DEB992+3610402]\n\tGetHandleVerifier [0x00007FF7B4E41860+3962352]\n\tGetHandleVerifier [0x00007FF7B4E39D4F+3930847]\n\tGetHandleVerifier [0x00007FF7B4B23646+693206]\n\t(No symbol) [0x00007FF7B4A01628]\n\t(No symbol) [0x00007FF7B49FD934]\n\t(No symbol) [0x00007FF7B49FDA62]\n\t(No symbol) [0x00007FF7B49EE113]\n\tBaseThreadInitThunk [0x00007FFCF8957344+20]\n\tRtlUserThreadStart [0x00007FFCF92626B1+33]\n"
+}

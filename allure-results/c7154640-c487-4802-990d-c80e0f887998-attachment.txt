@@ -1,0 +1,4 @@
+{
+  "script": "return (() => {\n      const userInputField = document.createElement('input');\n      userInputField.setAttribute('type', 'text');\n      userInputField.setAttribute('id', 'userInput');\n      document.body.appendChild(userInputField);\n    }).apply(null, arguments)",
+  "args": []
+}

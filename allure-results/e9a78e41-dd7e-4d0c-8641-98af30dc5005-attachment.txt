@@ -1,0 +1,4 @@
+{
+  "script": "return (() => {\n      return prompt(\"Please enter your input:\");\n    }).apply(null, arguments)",
+  "args": []
+}

@@ -1,6 +1,6 @@
 {
   "name": "my-new-project",
-  "type": "module",
+  "type": "commonjs",
   "devDependencies": {
     "@babel/core": "^7.22.20",
     "@babel/preset-env": "^7.22.20",

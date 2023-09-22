@@ -3,43 +3,38 @@ const login = require('../variables/login.json');
 var playerName = "";
 var playerRating = "";
 
-var password = "";
 
 describe('selling player cards in fifa ultimate team', () => {
     
     it("should navigate to EA FIFA web app", async () => {
         await browser.deleteAllCookies();
         await browser.maximizeWindow();
-        // Prompt user for input
-        const userInputPW = browser.execute(() => prompt('Please enter password: '));
-        // Now 'userInput' will contain the value entered by the user
-        console.log('User input:', userInputPW);
-        password = userInputPW;
         await browser.url("https://www.ea.com/fifa/ultimate-team/web-app/");                  //navigate to EA fut web app
-        await browser.pause(10000);
-        // await $("//p[@class='licenseBody']").waitForExist({timeout:10000,reverse:true});
         await $("//button[text()='Login']").waitForDisplayed({timeout:10000});
-        await expect(browser).toHaveTitle("FUT Web App - EA SPORTS Official Site");
+        await expect(browser).toHaveTitle("FC Ultimate Team Web App - EA SPORTS Official Site");
     });
 
 
     it("should login the web app", async () => {
+        await $("//button[text()='Login']").waitForClickable({timeout:10000});
         await $("//button[text()='Login']").click();
         await $("//input[@id='email']").waitForExist({timeout:10000});
         await $("//input[@id='email']").setValue(login.username);                             //type email
-        await $("//input[@id='password']").setValue(password);                          //type password
+        // await $("//input[@id='password']").setValue(password);                             //type password
         await $("//input[@id='rememberMe']").click({x:0});                                    //uncheck remember me
-        await $("//a[@id='logInBtn']").click();                                               //sign in
-        await browser.pause(2000);
+        // await $("//a[@id='logInBtn']").click();                                            //sign in
+        //user needs to input password and login manually
+        await $("//label[@id='APPLabel']").waitForExist({timeout:300000});                    //wait until user inputs password and clicks on login
         await $("//label[@id='APPLabel']").click();                                           //select authenticator
         await $("//a[@id='btnSendCode']").click();                                            //send code
         await browser.pause(1000);
         await $("//input[@id='trustThisDevice']").click({x:0});                               //uncheck remember device
         await $("//input[@id='twoFactorCode']").click();                                      //click on 6 digit code field
-        await browser.pause(9000);
-        await $("//a[@id='btnSubmit']").click();                                              //submit
-        await browser.pause(25000);
-        await expect($("//h1")).toHaveText("HOME");
+        // await browser.pause(9000);
+        // await $("//a[@id='btnSubmit']").click();                                           //submit
+        await $("//button/*[contains(text(),'Transfers')]/..").waitForExist({timeout:300000});//wait until user inputs code and signs in
+        // await browser.pause(25000);
+        await expect($("//h1")).toHaveText("Home");
     });
 
 

@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//header/*[contains(text(),'Available Items')]/../..//ul[@class='itemList']"
+}
